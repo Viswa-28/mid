@@ -1,78 +1,74 @@
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+/* Login Form Styling */
+body {
+  background-color: #0f172a; /* dark slate */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9; /* light text */
+  margin: 0;
+  padding: 0;
 }
 
-.modal.show {
-  display: block;
-}
-
-.inner-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.close-modal i {
-  color: #333;
-}
-
-.modal-content {
-  padding: 20px;
-}
-
-.modal-content h2 {
+.login-form {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #1e293b; /* card background */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   text-align: center;
+}
+
+.login-form h2 {
   margin-bottom: 20px;
-}
-
-.modal-content form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal-content label {
-  margin-bottom: 10px;
-}
-
-.modal-content input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.modal-content button[type="submit"] {
-  background-color: #337ab7;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 28px;
 }
 
-.modal-content button[type="submit"]:hover {
-  background-color: #23527c;
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #334155;
+  color: #f8fafc;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.login-form input:focus {
+  border: 2px solid #7C3AED;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #7C3AED;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #5b21b6;
+}
+
+.login-form a {
+  color: #7C3AED;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+.login-form p {
+  margin-top: 15px;
+  font-size: 14px;
 }

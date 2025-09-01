@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 ?>
 <h2 class="add-heading">add product</h2>
 
-<form action="add-product.php" method="post" enctype="multipart/form-data">
+<form class="add-product-form" action="add-product.php" method="post" enctype="multipart/form-data">
 <input type="text" name="name" placeholder="name">
 <input type="text" name="description" placeholder="description">
 <input type="text" name="price" placeholder="price">

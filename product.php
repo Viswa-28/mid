@@ -44,22 +44,12 @@ include('include/head.php');
           <div class="size">
             <p>X-large</p>
           </div>
-
         </div>
-        <!-- <div class="cart">
-          <div class="count">
-            <i class="bi bi-dash"></i>
-            <p class="value">1</p>
-            <i class="bi bi-plus"></i>
-          </div> -->
-          <a href="./cart.html">
-            <div class="primary-btn buy">
-              Buy Now
-            </div>
-          </a>
-        </div>
-        <!-- <p class="fs-25">Rs. 9999</p> -->
-
+        <a href="./cart.html">
+          <div class="primary-btn buy">
+            Buy Now
+          </div>
+        </a>
       </div>
     </div>
 
@@ -76,7 +66,6 @@ include('include/head.php');
             <p>Rs. 7,499</p>
           </div>
         </div>
-
         <!-- Card 2 -->
         <div class="product-card">
           <img src="./images/look2.jpg" alt="Royal Blue Blazer">
@@ -85,7 +74,6 @@ include('include/head.php');
             <p>Rs. 5,899</p>
           </div>
         </div>
-
         <!-- Card 3 -->
         <div class="product-card">
           <img src="./images/look3.jpg" alt="Noir Street Jacket">
@@ -94,7 +82,6 @@ include('include/head.php');
             <p>Rs. 6,200</p>
           </div>
         </div>
-
         <!-- Card 4 -->
         <div class="product-card">
           <img src="./images/look4.jpg" alt="Urban Midnight Coat">
@@ -103,7 +90,6 @@ include('include/head.php');
             <p>Rs. 8,000</p>
           </div>
         </div>
-
         <!-- Card 5 -->
         <div class="product-card">
           <img src="./images/look5.jpg" alt="Dark Aura Shirt">
@@ -112,7 +98,6 @@ include('include/head.php');
             <p>Rs. 3,299</p>
           </div>
         </div>
-
         <!-- Card 6 -->
         <div class="product-card">
           <img src="./images/look6.jpg" alt="Shadowline Suit">

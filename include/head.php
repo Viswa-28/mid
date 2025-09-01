@@ -50,30 +50,26 @@ elseif($page=='cart.php'){
 elseif ($page == 'register.php') {
     echo '<link rel="stylesheet" href="./css/register.css">';
      echo '<link rel="stylesheet" href="./css/common.css">';
-} elseif ($page == 'login.php') {
-    echo '<link rel="stylesheet" href="./css/style.css">';
 }
 elseif($page=='admin-nav.php'){
-    echo '<link rel="stylesheet" href="./css/dashboard.css">'; 
+  echo '<link rel="stylesheet" href="./css/dashboard.css">';
+}
+elseif ($page == 'login.php') {
+    echo '<link rel="stylesheet" href="./css/login.css">';
 }
 elseif ($page == 'dashboard.php') {
     echo '<link rel="stylesheet" href="./css/add.css">';
 }
 elseif ($page == 'trending.php') {
-    echo '<link rel="stylesheet" href="./css/dashboard.css">';
+    echo '<link rel="stylesheet" href="./css/add.css">';
 }
 elseif ($page == 'trending-products.php') {
+    echo '<link rel="stylesheet" href="./css/add.css">';
+}
+elseif ($page == 'add-product.php'|| $page == 'update-product.php'|| $page == 'delete-product.php') {
     echo '<link rel="stylesheet" href="./css/dashboard.css">';
 }
-elseif ($page == 'add-product.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
-}
-elseif ($page == 'ubdate-product.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
-}
-elseif ($page == 'delete-product.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
-}
+
 elseif ($page == 'contact.php') {
     echo '<link rel="stylesheet" href="./css/dashboard.css">';
 }
