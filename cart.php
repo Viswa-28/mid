@@ -2,7 +2,7 @@
 include('include/config.php');
 include('include/head.php');
 include('include/navbar.php');
-session_start(); // Ensure session is started
+// session_start(); // Ensure session is started
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -86,12 +86,12 @@ if (isset($_POST['checkout'])) {
                     <hr>
                     <div class="summary-row total">
                         <p>Total</p>
-                        <p class="total-val">Rs. <?php echo $price - 500; ?></p>
+                        <p class="total-val">Rs. <?php echo $price  ?></p>
                     </div>
-                    <div class="promo">
+                    <!-- <div class="promo">
                         <input type="text" placeholder="Apply First500">
                         <button class="primary-btn">Apply</button>
-                    </div>
+                    </div> -->
                     <form action=" " method="post">
                         <input type="hidden" name="quantity" id="updatedValue" value="1">
                         <input type="hidden" name="product_id" value="<?php echo $id; ?>">

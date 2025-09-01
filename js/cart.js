@@ -42,6 +42,7 @@ $(".promo button").click(function () {
 });
 
 let upDate = parseInt($(".count p").text());
+let amount = parseInt($(".total-amount").text().slice(3));
 
 function updateCountDisplay() {
   $(".count p").text(upDate);
@@ -55,9 +56,9 @@ function updateCountDisplay() {
 $(".bi-plus").click(function () {
   upDate++;
   updateCountDisplay();
-  $(".total-amount").text(`Rs. ${upDate * 2000}`);
-  $(".Subtotal").text(`Rs. ${upDate * 2000}`);
-  $(".total-val").text(`Rs. ${upDate * 2000}`);
+  $(".total-amount").text(`Rs. ${upDate * amount}`);
+  $(".Subtotal").text(`Rs. ${upDate * amount}`);
+  $(".total-val").text(`Rs. ${upDate * amount}`);
 });
 
 $(".bi-dash").click(function () {
