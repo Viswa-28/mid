@@ -3,10 +3,11 @@ include('include/config.php');
 include('include/head.php'); 
 include("include/admin-nav.php");
 ?>
-<body>
+<body class="bg-dark">
 
 
 <!-- Main Content -->
+
 <div class="container mt-5 pt-5">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Trending Products</h2>
@@ -25,7 +26,7 @@ include("include/admin-nav.php");
       $description = $row['description'];
       $imagePath = 'http://localhost/project/images/' . $image;
 
-      echo '<div class="col-md-4 mb-4">
+      echo '<div class="col-md-4 mb-4 ">
               <div class="card h-100">
                 <img src="' . $image . '" class="card-img-top" alt="' . $name . '">
                 <div class="card-body">

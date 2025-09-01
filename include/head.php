@@ -52,19 +52,19 @@ elseif ($page == 'register.php') {
      echo '<link rel="stylesheet" href="./css/common.css">';
 }
 elseif($page=='admin-nav.php'){
-  echo '<link rel="stylesheet" href="./css/dashboard.css">';
+  echo '<link rel="stylesheet" href="./css/adminnav.css">';
 }
 elseif ($page == 'login.php') {
     echo '<link rel="stylesheet" href="./css/login.css">';
 }
 elseif ($page == 'dashboard.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
+    echo '<link rel="stylesheet" href="./css/dashboard.css">';
 }
-elseif ($page == 'trending.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
-}
+// elseif ($page == 'trending.php') {
+//     echo '<link rel="stylesheet" href="./css/add.css">';
+// }
 elseif ($page == 'trending-products.php') {
-    echo '<link rel="stylesheet" href="./css/add.css">';
+    echo '<link rel="stylesheet" href="./css/trending.css">';
 }
 elseif ($page == 'add-product.php'|| $page == 'update-product.php'|| $page == 'delete-product.php') {
     echo '<link rel="stylesheet" href="./css/dashboard.css">';

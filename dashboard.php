@@ -1,33 +1,62 @@
+
 <?php
+session_start();
 include('include/config.php');
 include('include/head.php');
 include('include/admin-nav.php');
 
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.php");
+    exit();
+}
+
+// Admin Name from session
+$adminName = $_SESSION['username'] ?? 'Admin';
+
+// Total sales revenue
+$salesQuery = "SELECT SUM(price * quantity) AS total_revenue FROM sales";
+$salesResult = $conn->query($salesQuery);
+$salesData = $salesResult->fetch_assoc();
+$totalRevenue = $salesData['total_revenue'] ?? 0;
+
+// Total orders
+$ordersQuery = "SELECT COUNT(DISTINCT id) AS total_orders FROM sales";
+$ordersResult = $conn->query($ordersQuery);
+$ordersData = $ordersResult->fetch_assoc();
+$totalOrders = $ordersData['total_orders'] ?? 0;
+
+// Total quantity sold
+$quantityQuery = "SELECT SUM(quantity) AS total_quantity FROM sales";
+$quantityResult = $conn->query($quantityQuery);
+$quantityData = $quantityResult->fetch_assoc();
+$totalQuantity = $quantityData['total_quantity'] ?? 0;
 ?>
-<div class="dashboard">
-  <h2>Dashboard</h2>
+<div class="dashboard ">
+ 
 
   <!-- Stats Grid -->
-  <div class="stats-grid">
+  <div class="stats-grid" style="margin-bottom: 40px;">
     <div class="stat-box">
       <h3>Total Revenue</h3>
-      <p>₹<?= number_format($totalRevenue, 2) ?></p>
+      <p>₹<?php echo isset($totalRevenue) ? number_format($totalRevenue, 2) : '0.00'; ?></p>
     </div>
 
     <div class="stat-box">
       <h3>Total Orders</h3>
-      <p><?= $totalOrders ?></p>
+      <p><?php echo isset($totalOrders) ? $totalOrders : '0'; ?></p>
     </div>
 
     <div class="stat-box">
       <h3>Products Sold</h3>
-      <p><?= $totalQuantity ?></p>
+      <p><?php echo isset($totalQuantity) ? $totalQuantity : '0'; ?></p>
     </div>
   </div>
 
   <!-- Recent Sales -->
   <h3>Recent Sales</h3>
-  <table border="1" cellpadding="10" cellspacing="0">
+  <div class="dashboard-table-responsive" style="width:100%; overflow-x:auto; margin: 32px 0;">
+    <table class="dashboard-table" style="min-width:600px; width:100%;">
     <thead>
       <tr>
         <th>Order ID</th>
@@ -70,7 +99,8 @@ include('include/admin-nav.php');
       }
       ?>
     </tbody>
-  </table>
+    </table>
+  </div>
 </div>
 </div>
 
