@@ -59,7 +59,7 @@ $totalQuantity = $quantityData['total_quantity'] ?? 0;
     <table class="dashboard-table" style="min-width:600px; width:100%;">
     <thead>
       <tr>
-        <th>Order ID</th>
+        <!-- <th>Order ID</th> -->
         <th>Product ID</th>
         <th>Quantity</th>
         <th>Price (Each)</th>
@@ -78,7 +78,7 @@ $totalQuantity = $quantityData['total_quantity'] ?? 0;
 
       if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-          $orderId = $row['id'];
+          // $orderId = $row['id'];
           $productId = $row['product_id'];
           $quantity = $row['quantity'];
           $price = $row['price'];
@@ -86,7 +86,6 @@ $totalQuantity = $quantityData['total_quantity'] ?? 0;
           $date = date("Y-m-d", strtotime($row['sale_date']));
 
           echo "<tr>
-                                    <td>$orderId</td>
                                     <td>$productId</td>
                                     <td>$quantity</td>
                                     <td>₹$price</td>

@@ -25,8 +25,8 @@ include('include/head.php');
         </li>
         <li class="nav-item">
           <a class="nav-link 
-          <?php if($page=='users.php'){echo 'active';} ?>
-          " href="users.php">Users</a>
+          <?php if($page=='user-dash.php'){echo 'active';} ?>
+          " href="user-dash.php">Users</a>
         </li>
         <li class="nav-item">
           <a class="nav-link 
@@ -41,26 +41,5 @@ include('include/head.php');
   </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-  link.addEventListener('click', function() {
-    var navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarCollapse.classList.contains('show')) {
-      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: true});
-      bsCollapse.hide();
-    }
-  });
-});
-</script>
-<script>
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-  link.addEventListener('click', function() {
-    var navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarCollapse.classList.contains('show')) {
-      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: true});
-      bsCollapse.hide();
-    }
-  });
-});
-</script>
+
 

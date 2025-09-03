@@ -71,6 +71,9 @@ $(".bi-dash").click(function () {
   }
 });
 
+
+
+
 // Initialize variables
 
 // function ubDatePrice() {

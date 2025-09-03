@@ -69,9 +69,11 @@ elseif ($page == 'trending-products.php') {
 elseif ($page == 'add-product.php'|| $page == 'update-product.php'|| $page == 'delete-product.php') {
     echo '<link rel="stylesheet" href="./css/dashboard.css">';
 }
-
+elseif ($page == 'user-dash.php') {
+    echo '<link rel="stylesheet" href="./css/userdash.css">';
+}
 elseif ($page == 'contact.php') {
-    echo '<link rel="stylesheet" href="./css/dashboard.css">';
+    echo '<link rel="stylesheet" href="./css/contact.css">';
 }
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">

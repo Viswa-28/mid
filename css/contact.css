@@ -1,0 +1,115 @@
+body{
+    background-color: #18181b !important;
+}
+
+
+
+.contact-dash {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #23232a;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  color: #f3f4f6;
+  margin-top: 200px;
+}
+
+.contact-dash h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #7C3AED; /* primary color */
+  border-left: 5px solid #7C3AED;
+  padding-left: 12px;
+}
+
+/* Table Styling */
+.contact-dash table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e23;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-dash th,
+.contact-dash td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.contact-dash thead {
+  background: #7C3AED; /* primary violet */
+}
+
+.contact-dash thead th {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.contact-dash tbody tr {
+  border-bottom: 1px solid #2d2d35;
+  transition: background 0.3s ease;
+}
+
+.contact-dash tbody tr:hover {
+  background: rgba(124, 58, 237, 0.15); /* soft violet hover */
+}
+
+.contact-dash td {
+  font-size: 15px;
+  color: #e5e7eb;
+  word-wrap: break-word;
+  max-width: 300px; /* prevent long text from breaking layout */
+}
+
+/* Empty state */
+.contact-dash p {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-dash {
+    padding: 16px;
+  }
+
+  .contact-dash h2 {
+    font-size: 22px;
+  }
+
+  .contact-dash table,
+  .contact-dash thead,
+  .contact-dash tbody,
+  .contact-dash th,
+  .contact-dash td,
+  .contact-dash tr {
+    display: block;
+    width: 100%;
+  }
+
+  .contact-dash tr {
+    margin-bottom: 12px;
+    background: #1e1e23;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .contact-dash td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .contact-dash thead {
+    display: none;
+  }
+}

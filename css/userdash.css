@@ -1,0 +1,104 @@
+body {
+  background: #18181b !important;
+  color: #f3f4f6;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.user-dash {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #23232a;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  margin-top: 100px;
+}
+
+.user-dash h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #7C3AED; /* primary color */
+  border-left: 5px solid #7C3AED;
+  padding-left: 12px;
+}
+
+/* Table Styling */
+.user-dash table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e23;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-dash th, 
+.user-dash td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.user-dash thead {
+  background: #7C3AED; /* primary violet header */
+}
+
+.user-dash thead th {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.user-dash tbody tr {
+  border-bottom: 1px solid #2d2d35;
+  transition: background 0.3s ease;
+}
+
+.user-dash tbody tr:hover {
+  background: rgba(124, 58, 237, 0.15); /* soft violet hover */
+}
+
+.user-dash td {
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-dash {
+    padding: 16px;
+  }
+
+  .user-dash h1 {
+    font-size: 22px;
+  }
+
+  .user-dash table, 
+  .user-dash thead, 
+  .user-dash tbody, 
+  .user-dash th, 
+  .user-dash td, 
+  .user-dash tr {
+    display: block;
+    width: 100%;
+  }
+
+  .user-dash tr {
+    margin-bottom: 12px;
+    background: #1e1e23;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .user-dash td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .user-dash thead {
+    display: none;
+  }
+}
