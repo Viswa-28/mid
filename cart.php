@@ -3,19 +3,19 @@ include('include/config.php');
 include('include/head.php');
 include('include/navbar.php');
 
-session_start(); // Ensure that the session is started to capture user ID
+session_start(); 
 
-// Check if user is logged in
+
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit;
 }
 
-$userId = $_SESSION['user_id']; // Get the logged-in user's ID
+$userId = $_SESSION['user_id']; 
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $size = isset($_GET['size']) ? $_GET['size'] : 'Not selected';  // Check if size is selected
+    $size = isset($_GET['size']) ? $_GET['size'] : 'Not selected';  
     $query = "SELECT * FROM tproduct WHERE id = $id";
     $result = $conn->query($query);
     $row = $result->fetch_assoc();

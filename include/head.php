@@ -67,7 +67,7 @@ elseif ($page == 'trending-products.php') {
     echo '<link rel="stylesheet" href="./css/trending.css">';
 }
 elseif ($page == 'add-product.php'|| $page == 'update-product.php'|| $page == 'delete-product.php') {
-    echo '<link rel="stylesheet" href="./css/dashboard.css">';
+    echo '<link rel="stylesheet" href="./css/create-trending.css">';
 }
 elseif ($page == 'user-dash.php') {
     echo '<link rel="stylesheet" href="./css/userdash.css">';
