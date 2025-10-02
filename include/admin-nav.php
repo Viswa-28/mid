@@ -34,12 +34,14 @@ include('include/head.php');
           " href="contact.php">Contact</a>
         </li>
       </ul>
-      <form class="d-flex justify-content-center justify-content-lg-end" role="search">
-        <button class="btn btn-outline-light" type="submit">Logout</button>
+      <form class="d-flex justify-content-center justify-content-lg-end" action="dashboard.php" role="search" method="POST">
+        <button class="btn btn-outline-light" type="submit" name="logout">Logout</button>
       </form>
     </div>
   </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 

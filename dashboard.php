@@ -7,7 +7,7 @@ include('include/admin-nav.php');
 
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: login.php");
+    header("Location:login.php");
     exit();
 }
 
@@ -106,3 +106,10 @@ $totalQuantity = $quantityData['total_quantity'] ?? 0;
 </body>
 
 </html>
+<?php
+if(isset($_POST['logout'])){
+  session_destroy();
+  header('location:./admin/login.php');
+  
+}
+?>

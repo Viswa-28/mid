@@ -217,21 +217,12 @@ if (isset($_POST['submit'])) {
     }
 
     // If no errors → success
-    if (empty($errors)) {
-        // Example: store in DB or send email
-        echo json_encode([
-            "status" => "success",
-            "message" => "Form submitted successfully!"
-        ]);
-    } else {
-        // Return errors as JSON
-        echo json_encode([
-            "status" => "error",
-            "errors" => $errors
-        ]);
-    }
+   if(empty($errors)){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-  // $sql = "INSERT INTO messages (username, email, message) VALUES ('$name', '$email', '$message')";
+   }
   $sql = "INSERT INTO messages ( `username`, `email`, `message` ) VALUES ('$name','$email','$message')";
   // echo "<script>alert('" . $sql . "');</script>";
   // $result = $conn->query($sql);   
@@ -244,7 +235,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-<form id="contactForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<form id="contactForm" action="index.php" method="post">
   <h2 class="section-title" id="contact">Contact</h2>
   <input type="text" class="username" placeholder="Username" name="name">
   <span class="error username-error"></span>

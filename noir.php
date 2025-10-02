@@ -25,11 +25,11 @@ if (isset($_GET['id'])) {
   <span class="current-page">Noir Muse</span>
 </div>
 
-<div class="product">
-  <div class="left">
-    <img src="<?php echo $image;   ?>" alt="">
+<div class="product row w-100">
+  <div class="left col">
+    <img src="<?php echo $image;   ?>" class="img-fluid h-100 w-100" alt="">
   </div>
-  <div class="right">
+  <div class="right col">
     <h2><?php echo $name;   ?></h2>
     <div class="star-container">
       <i class="bi bi-star-fill"></i>
